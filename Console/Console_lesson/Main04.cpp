@@ -97,6 +97,7 @@ while 문 같은 경우 while문을 빠져 나간다.
 break 유무에 따라 실행 결과가 완전히 바꾸기 때문에 주의가 필요하다
 
 4. goto
+점프문이라 불리며 goto에 라벨을 지정하면 중간에 있는 흐름을 무시하고 해당 라벨로 즉시 이동
 
 
 
@@ -107,4 +108,23 @@ break 유무에 따라 실행 결과가 완전히 바꾸기 때문에 주의가 필요하다
 
 void main()
 {
+	int nOperator;
+	cout << "숫자 입력: ";
+	cin >> nOperator;
+	if(nOperator == 0)
+	{
+		cout << "6월" << endl;
+	}
+	else if(nOperator == 1)
+	{
+		cout << "7월" << endl;
+	}
+	else
+	{
+		cout << "나머지 월" << endl;
+	}
+	cout << '\n';
+
+
+
 }
