@@ -1,25 +1,25 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <time.h>
 #include <Windows.h>
 using std::cin;
 using std::cout;
 using std::endl;
 
-#pragma region ¿¬»êÀÚ
+#pragma region ì—°ì‚°ìž
 /**
-¢¹ ¿¬»êÀÚ¶õ?
-ÇÁ·Î±×·¥ÀÌ µ¿ÀÛÇÒ ¶§ Á¤ÇØÁ® ÀÖ´Â Æ¯Á¤ ¿ªÇÒÀ» ¼öÇàÇÑ´À Å°¿öµå¸¦ ¿¬»êÀÚ¶ó°í ÇÑ´Ù.
-¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¸é ´Ù¾çÇÑ ÇÁ·Î±×·¥ ·ÎÁ÷À» ¸¸µé¾î ³»´Â °ÍÀÌ °¡´ÉÇÏ´Ù.
+â–· ì—°ì‚°ìžëž€?
+í”„ë¡œê·¸ëž¨ì´ ë™ìž‘í•  ë•Œ ì •í•´ì ¸ ìžˆëŠ” íŠ¹ì • ì—­í• ì„ ìˆ˜í–‰í•œëŠ í‚¤ì›Œë“œë¥¼ ì—°ì‚°ìžë¼ê³  í•œë‹¤.
+ì—°ì‚°ìžë¥¼ ì´ìš©í•˜ë©´ ë‹¤ì–‘í•œ í”„ë¡œê·¸ëž¨ ë¡œì§ì„ ë§Œë“¤ì–´ ë‚´ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤.
 
-±âº»ÀûÀÎ ¿¬»êÀÚÀÇ Á¾·ù
-»ê¼ú ¿¬»êÀÚ
+ê¸°ë³¸ì ì¸ ì—°ì‚°ìžì˜ ì¢…ë¥˜
+ì‚°ìˆ  ì—°ì‚°ìž
 +
 -
 *
-/ : ¸ò¸¸ ³²±â°í ³ª¸ÓÁö out
-% : ³ª¸ÓÁö ³²±â°í ¸ò out
+/ : ëª«ë§Œ ë‚¨ê¸°ê³  ë‚˜ë¨¸ì§€ out
+% : ë‚˜ë¨¸ì§€ ë‚¨ê¸°ê³  ëª« out
 
-ºñ±³
+ë¹„êµ
 num
 num
 num
@@ -30,14 +30,14 @@ num
 num
 num
 
-num == num1 -> numÀÌ num1°ú °°´Ù.
-num != num1 -> numÀÌ num1°ú °°Áö ¾Ê´Ù.
-num <  num1 -> numÀÌ num1º¸´Ù ÀÛ´Ù.
-num >  num1 -> numÀÌ num1º¸´Ù Å©´Ù. 
-num <= num1 -> numÀÌ num1º¸´Ù ÀÛ°Å³ª °°´Ù. 
-num >= num1 -> numÀÌ num1º¸´Ù Å©°Å³ª °°´Ù.
+num == num1 -> numì´ num1ê³¼ ê°™ë‹¤.
+num != num1 -> numì´ num1ê³¼ ê°™ì§€ ì•Šë‹¤.
+num <  num1 -> numì´ num1ë³´ë‹¤ ìž‘ë‹¤.
+num >  num1 -> numì´ num1ë³´ë‹¤ í¬ë‹¤. 
+num <= num1 -> numì´ num1ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ë‹¤. 
+num >= num1 -> numì´ num1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ë‹¤.
 
-ÇÒ´ç ¿¬»êÀÚ
+í• ë‹¹ ì—°ì‚°ìž
 =
 +=
 -=
@@ -45,9 +45,9 @@ num >= num1 -> numÀÌ num1º¸´Ù Å©°Å³ª °°´Ù.
 /=
 %=
 
-ºñÆ® ¿¬»êÀÚ
-- ¿Ö ½á¾ß ÇÏ´Â°¡?
-- peformance: ºü¸¥ °è»ê. ÇÃ·¡±× ¸¶½ºÅ©
+ë¹„íŠ¸ ì—°ì‚°ìž
+- ì™œ ì¨ì•¼ í•˜ëŠ”ê°€?
+- peformance: ë¹ ë¥¸ ê³„ì‚°. í”Œëž˜ê·¸ ë§ˆìŠ¤í¬
 
 &
 |
@@ -56,38 +56,38 @@ num >= num1 -> numÀÌ num1º¸´Ù Å©°Å³ª °°´Ù.
 <<
 >>
 
-³í¸® ¿¬»êÀÚ
+ë…¼ë¦¬ ì—°ì‚°ìž
 bool num;
 num				
-num && num2 -> num°ú num2 ÂüÀÌ¾î¾ß ½ÇÇà
-num || num2 -> num°ú num2 µÑ Áß¿¡ ÇÏ³ª¸¸ ÂüÀÌ¸é ½ÇÇà
-!num : ³í¸®ºÎÁ¤
+num && num2 -> numê³¼ num2 ì°¸ì´ì–´ì•¼ ì‹¤í–‰
+num || num2 -> numê³¼ num2 ë‘˜ ì¤‘ì— í•˜ë‚˜ë§Œ ì°¸ì´ë©´ ì‹¤í–‰
+!num : ë…¼ë¦¬ë¶€ì •
 
 
-Çüº¯È¯ ¿¬»êÀÚ
-(Æ¯Á¤ DataType) º¯¼ö¸í
+í˜•ë³€í™˜ ì—°ì‚°ìž
+(íŠ¹ì • DataType) ë³€ìˆ˜ëª…
 	int val = 0;
 		(float)val
 
-c/c++ ¾ð¾î´Â Çüº¯È¯ ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¸é °£´ÜÇÏ°Ô ÇØ´ç º¯¼öÀÇ ÀÚ·áÇüÀ» º¯°æÇÏ´Â °ÍÀÌ °¡´É
+c/c++ ì–¸ì–´ëŠ” í˜•ë³€í™˜ ì—°ì‚°ìžë¥¼ ì´ìš©í•˜ë©´ ê°„ë‹¨í•˜ê²Œ í•´ë‹¹ ë³€ìˆ˜ì˜ ìžë£Œí˜•ì„ ë³€ê²½í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥
 
-()·Î ÀÌ·ç¾îÁö´Â Çüº¯È¯ ¿¬»êÀÚ´Â ÀáÀçÀû ¸®½ºÅ©¸¦ °¡Áö°í ÀÖ±â ¶§¹®¿¡ »ç¿ëÇÒ ¶§ ÁÖÀÇ°¡ ÇÊ¿äÇÏ´Ù.
+()ë¡œ ì´ë£¨ì–´ì§€ëŠ” í˜•ë³€í™˜ ì—°ì‚°ìžëŠ” ìž ìž¬ì  ë¦¬ìŠ¤í¬ë¥¼ ê°€ì§€ê³  ìžˆê¸° ë•Œë¬¸ì— ì‚¬ìš©í•  ë•Œ ì£¼ì˜ê°€ í•„ìš”í•˜ë‹¤.
 
-°­Á¦ Çüº¯È¯ (¸í½ÃÀû Çüº¯È¯) -> °¡µ¶¼º¸é¿¡¼­ ¹®Á¦°¡ ¹ß»ýÇÑ´Ù.
+ê°•ì œ í˜•ë³€í™˜ (ëª…ì‹œì  í˜•ë³€í™˜) -> ê°€ë…ì„±ë©´ì—ì„œ ë¬¸ì œê°€ ë°œìƒí•œë‹¤.
 
-¡Ù¡Ù¡Ù¡Ù¡Ù
-±×·¸±â ¶§¹®¿¡ ¾ÈÁ¤¼ºÀ» ¿ì¼±½Ã ÇÑ´Ù¸é Ä³½ºÆÃ ¿¬»êÀÚ¸¦ »ç¿ëÇÑ´Ù.
-static_cast<int>(obj) -> obj¸¦ type·Î ¹Ù²Û´Ù
+â˜†â˜†â˜†â˜†â˜†
+ê·¸ë ‡ê¸° ë•Œë¬¸ì— ì•ˆì •ì„±ì„ ìš°ì„ ì‹œ í•œë‹¤ë©´ ìºìŠ¤íŒ… ì—°ì‚°ìžë¥¼ ì‚¬ìš©í•œë‹¤.
+static_cast<int>(obj) -> objë¥¼ typeë¡œ ë°”ê¾¼ë‹¤
 dynamic_cast<int>(obj)
 reinterpret_cast<int>(obj)
 
 
-¹Ýº¹¹®
-ÇÁ·Î±×·¥ÀÇ Æ¯Á¤ ºÎºÐÀ» ÀÏÁ¤ È½¼ö ÀÌ»ó ¹Ýº¹ÇØ¼­ ½ÇÇàÇÏ±â À§ÇÑ ¹®¹ý
-¹Ýº¹ÀûÀ¸·Î ¹ß»ýµÇ´Â ±¸°£À» È¿À²ÀûÀ¸·Î Ã³¸® °¡´É -> Æí¸®ÇÔ + È¿À²¼º ¼öÁ÷ »ó½Â / ÆÛÆ÷¸Õ½º ÀÌ½´
+ë°˜ë³µë¬¸
+í”„ë¡œê·¸ëž¨ì˜ íŠ¹ì • ë¶€ë¶„ì„ ì¼ì • íšŸìˆ˜ ì´ìƒ ë°˜ë³µí•´ì„œ ì‹¤í–‰í•˜ê¸° ìœ„í•œ ë¬¸ë²•
+ë°˜ë³µì ìœ¼ë¡œ ë°œìƒë˜ëŠ” êµ¬ê°„ì„ íš¨ìœ¨ì ìœ¼ë¡œ ì²˜ë¦¬ ê°€ëŠ¥ -> íŽ¸ë¦¬í•¨ + íš¨ìœ¨ì„± ìˆ˜ì§ ìƒìŠ¹ / í¼í¬ë¨¼ìŠ¤ ì´ìŠˆ
 
 
-c/c++ ¹Ýº¹¹®ÀÇ Á¾·ù
+c/c++ ë°˜ë³µë¬¸ì˜ ì¢…ë¥˜
 for
 while
 do while
@@ -100,20 +100,20 @@ for_each
 
 
 */
-#pragma endregion ¿¬»êÀÚ
+#pragma endregion ì—°ì‚°ìž
 
 int main()
 {
 /**
-¢¹ º¯¼ö ÀÌ¸§ÀÇ Æ¯Â¡
-±âº»ÀûÀ¸·Î º¯¼öÀÇ ÀÌ¸§Àº ¾ËÆÄºª, ¼ýÀÚ, _·Î ±¸¼ºµÈ´Ù
-ÇÑ±ÛÀ» »ç¿ëÇÒ ¼ö ÀÖÁö¸¸ X
+â–· ë³€ìˆ˜ ì´ë¦„ì˜ íŠ¹ì§•
+ê¸°ë³¸ì ìœ¼ë¡œ ë³€ìˆ˜ì˜ ì´ë¦„ì€ ì•ŒíŒŒë²³, ìˆ«ìž, _ë¡œ êµ¬ì„±ëœë‹¤
+í•œê¸€ì„ ì‚¬ìš©í•  ìˆ˜ ìžˆì§€ë§Œ X
 
-c ¾ð¾î´Â ´ë¼Ò¹®ÀÚ¸¦ ±¸ºÐÇÏ¸ç Num/num Àº ´Ù¸¥ º¯¼ö·Î ÀÎ½ÄÇÑ´Ù
+c ì–¸ì–´ëŠ” ëŒ€ì†Œë¬¸ìžë¥¼ êµ¬ë¶„í•˜ë©° Num/num ì€ ë‹¤ë¥¸ ë³€ìˆ˜ë¡œ ì¸ì‹í•œë‹¤
 
-1. º¯¼öÀÇ ÀÌ¸§Àº ¼ýÀÚ·Î ½ÃÀÛÇÒ ¼ö ¾ø´Ù.
-2. Å°¿öµåµµ º¯¼ö ÀÌ¸§À¸·Î »ç¿ëÇÒ ¼ö ¾ø´Ù.
-3. ÀÌ¸§ »çÀÌ¿¡ °ø¹é ¶ÇÇÑ »ðÀÔµÉ ¼ö ¾ø´Ù.
+1. ë³€ìˆ˜ì˜ ì´ë¦„ì€ ìˆ«ìžë¡œ ì‹œìž‘í•  ìˆ˜ ì—†ë‹¤.
+2. í‚¤ì›Œë“œë„ ë³€ìˆ˜ ì´ë¦„ìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+3. ì´ë¦„ ì‚¬ì´ì— ê³µë°± ë˜í•œ ì‚½ìž…ë  ìˆ˜ ì—†ë‹¤.
 ex)
 int Num0;
 int Num1;
@@ -121,16 +121,16 @@ int _Num2;
 int 6Num;
 int Num0 look;
 int bool;
-¢¹
-¢¹
-¢¹
-¢¹
-¢¹
-¢¹
-¢¹
-¢¹
+â–·
+â–·
+â–·
+â–·
+â–·
+â–·
+â–·
+â–·
  */
-	// ·£´ý½Ãµå ÃÊ±âÈ­
+	// ëžœë¤ì‹œë“œ ì´ˆê¸°í™”
 	srand(time(NULL));
 
 	int numR;
@@ -141,41 +141,41 @@ int bool;
 	int weaponA = 0;
 	// 20 ~ 25
 	weaponA = 20 + rand() % (5+1);
-	cout  << "¹«±â µ¥¹ÌÁöÀÇ °ª: " << weaponA  << endl;
+	cout  << "ë¬´ê¸° ë°ë¯¸ì§€ì˜ ê°’: " << weaponA  << endl;
 
 	RAND_MAX;
 
 
 
 	/**
-	01. for ¹®
-	ÃÊ±â½Ä
-	Á¶°Ç½Ä
-	Áõ°¨½Ä
+	01. for ë¬¸
+	ì´ˆê¸°ì‹
+	ì¡°ê±´ì‹
+	ì¦ê°ì‹
 
-	for(ÃÊ±â½Ä; Á¶°Ç½Ä; Áõ°¨½Ä)
+	for(ì´ˆê¸°ì‹; ì¡°ê±´ì‹; ì¦ê°ì‹)
 	{
-		¹Ýº¹ÀÌ µÇ´Â ¹®Àå
+		ë°˜ë³µì´ ë˜ëŠ” ë¬¸ìž¥
 	}
-	ÃÊ±â °ªÀº ¸Ç Ã³À½¿¡ ÇÑ ¹ø¸¸ ¼öÇà µÇ°í Á¶°Ç½ÄÀÌ ÂüÀÎ µ¿¾È¸¸ ¸í·É¹®À» ¹Ýº¹ ¼öÇà
+	ì´ˆê¸° ê°’ì€ ë§¨ ì²˜ìŒì— í•œ ë²ˆë§Œ ìˆ˜í–‰ ë˜ê³  ì¡°ê±´ì‹ì´ ì°¸ì¸ ë™ì•ˆë§Œ ëª…ë ¹ë¬¸ì„ ë°˜ë³µ ìˆ˜í–‰
 	 */
 	int i;
 	for(i=0; i<10; ++i)
 	{
-		cout << "[ " << i << "] ¹ø Â° for ¹®" <<endl;
+		cout << "[ " << i << "] ë²ˆ ì§¸ for ë¬¸" <<endl;
 	}
 	cout <<'\n';
 
 	int number = 0;
 	for(;number<5; number++)
 	{
-		cout << "ÀÌ°Ç..? " << number << endl;
+		cout << "ì´ê±´..? " << number << endl;
 	}
 	cout <<'\n';
 	/**
-	ÃÊ±âÈ­ »ý·«: for(; i<10 ; ++i)
-	Á¶°Ç½Ä »ý·«: for(i=1; ; ++i)
-	¸ðµÎ  »ý·«: for(; ; )				==> while¹®
+	ì´ˆê¸°í™” ìƒëžµ: for(; i<10 ; ++i)
+	ì¡°ê±´ì‹ ìƒëžµ: for(i=1; ; ++i)
+	ëª¨ë‘  ìƒëžµ: for(; ; )				==> whileë¬¸
 	 */
 
 	int j=1;
@@ -186,9 +186,9 @@ int bool;
 	}
 
 	/**
-	 ¹Ýº¹¹®Àº ±âº»ÀûÀ¸·Î ¹Ýº¹ÇØ¼­ ½ÇÇàÇÏ´Â °ÍÀÌ °¡´ÉÇÏ±â ¶§¹®¿¡ ¹Ýº¹¹®¿¡ ¾È¿¡ ¹Ýº¹¹®À» ³Ö´Â °ÍÀÌ °¡´ÉÇÏ´Ù
-	 ÀÌ¸¦ ÁßÃ¸ ¹Ýº¹¹®ÀÌ¶ó°í ºÎ¸¥´Ù
-	 Æí¸®ÇÔ + È¿À²¼º ¼öÁ÷ »ó½Â/ ÆÛÆ÷¸Õ½º ÀÌ½´
+	 ë°˜ë³µë¬¸ì€ ê¸°ë³¸ì ìœ¼ë¡œ ë°˜ë³µí•´ì„œ ì‹¤í–‰í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì— ë°˜ë³µë¬¸ì— ì•ˆì— ë°˜ë³µë¬¸ì„ ë„£ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤
+	 ì´ë¥¼ ì¤‘ì²© ë°˜ë³µë¬¸ì´ë¼ê³  ë¶€ë¥¸ë‹¤
+	 íŽ¸ë¦¬í•¨ + íš¨ìœ¨ì„± ìˆ˜ì§ ìƒìŠ¹/ í¼í¬ë¨¼ìŠ¤ ì´ìŠˆ
 	 */
 
 	/*for(int i=2; i<10; ++i)
@@ -203,7 +203,7 @@ int bool;
 	}*/
 	for(int i=1; i<10; i +=3)
 	{
-		printf("%2d´Ü,          %2d ´Ü,         %2d´Ü\n", i+0, i+1, i+2);
+		printf("%2dë‹¨,          %2d ë‹¨,         %2dë‹¨\n", i+0, i+1, i+2);
 		for(int j=2; j<10; ++j)
 		{
 			printf("%2d x %2d = %3d, %2d x %2d = %3d, %2d x %2d = %3d\n", i+0, j+0, (i+0)*(j+0), i+1, j+0, (i+1)*(j+0), i+2, j+0, (i+2)*(j+0) );
@@ -218,11 +218,11 @@ int bool;
 
 	/**
 	 02. while
-	 - ¹«ÇÑ (Loop)
-	 - ¹Ýº¹ Á¶°Ç¿¡ ÂüÀÌ µé¾î°¥ °æ¿ì ¹«ÇÑ ·çÇÁ
-	 - Á¶°ÇÀÌ ÂüÀÏ ¶§¸¸ µ¿ÀÛ
-	 - Á¦¾î¹®À¸·Î °­Á¦ °ÅÁþÀ» ¸¸µå´Â °ÍÀÌ °¡´É
-	 - while¹®Àº Æ¯Á¤ Á¶°ÇÀ» ÁÖ°í ±× Á¶°ÇÀ» ¸¸Á·ÇÏ´Â µ¿¾È Æ¯Á¤ ¿µ¿ªÀ» ¹Ýº¹ÇÏ´Â ±¸Á¶
+	 - ë¬´í•œ (Loop)
+	 - ë°˜ë³µ ì¡°ê±´ì— ì°¸ì´ ë“¤ì–´ê°ˆ ê²½ìš° ë¬´í•œ ë£¨í”„
+	 - ì¡°ê±´ì´ ì°¸ì¼ ë•Œë§Œ ë™ìž‘
+	 - ì œì–´ë¬¸ìœ¼ë¡œ ê°•ì œ ê±°ì§“ì„ ë§Œë“œëŠ” ê²ƒì´ ê°€ëŠ¥
+	 - whileë¬¸ì€ íŠ¹ì • ì¡°ê±´ì„ ì£¼ê³  ê·¸ ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ë™ì•ˆ íŠ¹ì • ì˜ì—­ì„ ë°˜ë³µí•˜ëŠ” êµ¬ì¡°
 	 */
 
 	int playerHP = 1000;
@@ -230,18 +230,18 @@ int bool;
 	{
 		int hit = 100;
 		playerHP -= hit;
-		cout << "Ã¼·Â: " << playerHP << endl;
+		cout << "ì²´ë ¥: " << playerHP << endl;
 	}
 	cout << '\n';
 
 	int numC = 0;
 	while(numC < 5)
 	{
-		cout << "¹Ýº¹¹® Ãâ·Â " << endl;
+		cout << "ë°˜ë³µë¬¸ ì¶œë ¥ " << endl;
 		numC++;
 	}
 	cout << '\n';
-	cout << "While¹® ±¸±¸´Ü" <<endl;
+	cout << "Whileë¬¸ êµ¬êµ¬ë‹¨" <<endl;
 
 	int valueA = 1;
 	int valueB = 2;
@@ -259,25 +259,25 @@ int bool;
 	/**
  
 	03. do~while
-	while ¹®°¡ Â÷ÀÌÁ¡: Á¶°ÇÀ» °Ë»çÇÏ´Â ½ÃÁ¡ÀÌ ´Ù¸£´Ù.
-	ÀÏ´Ü ¹«Á¶°Ç ÇÑ ¹ø ½ÇÇà ÈÄ while ¹®ÀÇ Á¶°ÇÀ» °Ë»çÇÏ¿© do~while ¹®¾ÈÀÇ ¹®ÀåÀ» ½ÇÇà ÇÒ °ÍÀÎÁö ÆÇ´Ù.
+	while ë¬¸ê°€ ì°¨ì´ì : ì¡°ê±´ì„ ê²€ì‚¬í•˜ëŠ” ì‹œì ì´ ë‹¤ë¥´ë‹¤.
+	ì¼ë‹¨ ë¬´ì¡°ê±´ í•œ ë²ˆ ì‹¤í–‰ í›„ while ë¬¸ì˜ ì¡°ê±´ì„ ê²€ì‚¬í•˜ì—¬ do~while ë¬¸ì•ˆì˜ ë¬¸ìž¥ì„ ì‹¤í–‰ í•  ê²ƒì¸ì§€ íŒë‹¤.
 	do
 	{
-	}while(Á¶°Ç½Ä);
+	}while(ì¡°ê±´ì‹);
 
 	 */
 
 	int numD = 0;
 	do 
 	{
-		cout << "do while¹® " <<endl;
+		cout << "do whileë¬¸ " <<endl;
 		numD++;
 	} while (numD < -1);
 	cout <<'\n';
 
 	do 
 	{
-		cout << "do while¹® µÎ¹øÂ°" <<endl;
+		cout << "do whileë¬¸ ë‘ë²ˆì§¸" <<endl;
 		numD++;
 	} while (numD < 3);
 	cout << '\n';
@@ -285,19 +285,19 @@ int bool;
 	int total=0, num = 0;
 	do 
 	{
-		cout<< "¼ýÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À." <<endl;
-		cout << "ÀÔ·Â µÈ ¼ýÀÚ´Â ¸ðµÎ ´õÇÏ¿© ÇÁ·Î±×·¥ Á¾·á¸¦ ´©·ç¸é °á°ú °ªÀ» Ãâ·ÂÇÑ´Ù."<< endl;
-		cout << "0À» ÀÔ·ÂÇÏ¸é Á¾·ù" << endl;
+		cout<< "ìˆ«ìžë¥¼ ìž…ë ¥í•˜ì‹œì˜¤." <<endl;
+		cout << "ìž…ë ¥ ëœ ìˆ«ìžëŠ” ëª¨ë‘ ë”í•˜ì—¬ í”„ë¡œê·¸ëž¨ ì¢…ë£Œë¥¼ ëˆ„ë£¨ë©´ ê²°ê³¼ ê°’ì„ ì¶œë ¥í•œë‹¤."<< endl;
+		cout << "0ì„ ìž…ë ¥í•˜ë©´ ì¢…ë¥˜" << endl;
 		cin >> num;
 		total += num;
 	} while (num !=0);
-	cout << "ÀÔ·ÂÇÑ ¼ýÀÚÀÇ ÇÕ°è: " << total << "ÀÌ´Ù. "<<endl;
+	cout << "ìž…ë ¥í•œ ìˆ«ìžì˜ í•©ê³„: " << total << "ì´ë‹¤. "<<endl;
 
 
 	/**
-	 while¹®°ú do~while¹®
-	 ¹Ýº¹ÀÇ È½¼ö°¡ Á¤ÇØÁ® ÀÖ°Å³ª Æ¯Á¤ÇÒ ¼ö ÀÖ´Ù¸é while < -> do~while ¹®ÀÌ ÀÚ¿¬½º·´°Ô ¹Ù²îÁö¸¸
-	 ¹Ý¸ñÀÇ È½¼ö°¡ Á¤ÇØÁ® ÀÖÁö ¾Ê°í ¾ðÁ¦ Á¾·á°¡ µÉ Áö ¸ð¸¥´Ù¸é °í¹ÎÀÌ ÇÊ¿äÇÏ´Ù.
+	 whileë¬¸ê³¼ do~whileë¬¸
+	 ë°˜ë³µì˜ íšŸìˆ˜ê°€ ì •í•´ì ¸ ìžˆê±°ë‚˜ íŠ¹ì •í•  ìˆ˜ ìžˆë‹¤ë©´ while < -> do~while ë¬¸ì´ ìžì—°ìŠ¤ëŸ½ê²Œ ë°”ë€Œì§€ë§Œ
+	 ë°˜ëª©ì˜ íšŸìˆ˜ê°€ ì •í•´ì ¸ ìžˆì§€ ì•Šê³  ì–¸ì œ ì¢…ë£Œê°€ ë  ì§€ ëª¨ë¥¸ë‹¤ë©´ ê³ ë¯¼ì´ í•„ìš”í•˜ë‹¤.
 	 */
 
 	return 0;

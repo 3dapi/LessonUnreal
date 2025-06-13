@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <time.h>
 #include <Windows.h>
 
@@ -8,65 +8,65 @@ using std::cout;
 using std::endl;
 #pragma endregion USING STD
 
-#pragma region Á¶°Ç¹®
+#pragma region ì¡°ê±´ë¬¸
 
 /**
-04ÀÏÂ÷.
+04ì¼ì°¨.
 
-¢¹Á¶°Ç¹®ÀÌ¶õ
-ÇÁ·Î±×·¥ÀÌ ½ÇÇàµÇ´Â µ¿¾È Á¤ÇØÀú ÀÖ´Â °æ¿þ ¼ö¿¡ ¸ÂÃç ¼­·Î ´Ù¸¥ °á°ú¸¦ µµÃâÇÏ±â À§ÇÑ ¹®¹ý
-Á¶°Ç¹®À» ÀÌ¿ëÇÏ¸é ´Ù¾çÇÑ °á°ú¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ´Â °ÍÀÌ °¡´ÉÇÏ´Ù.
+â–·ì¡°ê±´ë¬¸ì´ëž€
+í”„ë¡œê·¸ëž¨ì´ ì‹¤í–‰ë˜ëŠ” ë™ì•ˆ ì •í•´ì € ìžˆëŠ” ê²½ì›¨ ìˆ˜ì— ë§žì¶° ì„œë¡œ ë‹¤ë¥¸ ê²°ê³¼ë¥¼ ë„ì¶œí•˜ê¸° ìœ„í•œ ë¬¸ë²•
+ì¡°ê±´ë¬¸ì„ ì´ìš©í•˜ë©´ ë‹¤ì–‘í•œ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤.
 
-c/c++ Á¶°Ç¹® Á¾·ù
+c/c++ ì¡°ê±´ë¬¸ ì¢…ë¥˜
 1. if~else
 2. switch~case
 
-¢¹if~else Á¶°Ç¹®
-Á¶°ÇÀû ½ÇÇà (Á¶°Ç¿¡ µû¶ó ½ÇÇà À¯¹«)
-Á¶°ÇÀ» ¸¸Á·ÇÏ´Â if¹®À» ¹ß°ßÇÏ¸é ³ª¸ÓÁö if¹®À» °Ç³Ê¶Ú´Ù
-if~else ¸¸³ª¼­ ÀÌ·ç´Â ¹®ÀÚÀÇ ¼ö´Â µÑÀÌ ¾Æ´Ï¶ó ÇÏ³ªÀÌ´Ù.
-if~else ¹®¿¡¼­ Á¶°ÇÀÇ ¸¸Á· ¿©ºÎ °Ë»ç´Â À§¿¡¼­ ¾Æ·¡·Î ÀýÂ÷ÁöÇâÀûÀ¸·Î ÁøÇàÀÌ µÈ´Ù.
-Á¶°ÇÀÌ ¸¸Á·µÇ¾î ÇØ´ç ºí·ÏÀ» ½ÇÇàÇÏ°í ³ª¸é ¸¶Áö¸· else¹®±îÁöµµ °Ç³Ê¶Ù´Â Æ¯¼ºÀ» °¡Áö°í ÀÖ´Ù.
-Á¶°ÇÀ» ¸¸Á·ÇÏÁö ¸øÇÒ ½Ã else ¹®ÀÌ ½ÇÇàµÇ´Â ±¸Á¶
+â–·if~else ì¡°ê±´ë¬¸
+ì¡°ê±´ì  ì‹¤í–‰ (ì¡°ê±´ì— ë”°ë¼ ì‹¤í–‰ ìœ ë¬´)
+ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ifë¬¸ì„ ë°œê²¬í•˜ë©´ ë‚˜ë¨¸ì§€ ifë¬¸ì„ ê±´ë„ˆë›´ë‹¤
+if~else ë§Œë‚˜ì„œ ì´ë£¨ëŠ” ë¬¸ìžì˜ ìˆ˜ëŠ” ë‘˜ì´ ì•„ë‹ˆë¼ í•˜ë‚˜ì´ë‹¤.
+if~else ë¬¸ì—ì„œ ì¡°ê±´ì˜ ë§Œì¡± ì—¬ë¶€ ê²€ì‚¬ëŠ” ìœ„ì—ì„œ ì•„ëž˜ë¡œ ì ˆì°¨ì§€í–¥ì ìœ¼ë¡œ ì§„í–‰ì´ ëœë‹¤.
+ì¡°ê±´ì´ ë§Œì¡±ë˜ì–´ í•´ë‹¹ ë¸”ë¡ì„ ì‹¤í–‰í•˜ê³  ë‚˜ë©´ ë§ˆì§€ë§‰ elseë¬¸ê¹Œì§€ë„ ê±´ë„ˆë›°ëŠ” íŠ¹ì„±ì„ ê°€ì§€ê³  ìžˆë‹¤.
+ì¡°ê±´ì„ ë§Œì¡±í•˜ì§€ ëª»í•  ì‹œ else ë¬¸ì´ ì‹¤í–‰ë˜ëŠ” êµ¬ì¡°
 
 ex)
-if(Á¶°Ç½Ä1)
+if(ì¡°ê±´ì‹1)
 {
-	Á¶°Ç½Ä1ÀÌ ÂüÀÌ¸é ½ÇÇàµÉ ÄÚµå
+	ì¡°ê±´ì‹1ì´ ì°¸ì´ë©´ ì‹¤í–‰ë  ì½”ë“œ
 }
-else if(Á¶°Ç½Ä2)
+else if(ì¡°ê±´ì‹2)
 {
-	Á¶°Ç½Ä2ÀÌ ÂüÀÌ¸é ½ÇÇàµÉ ÄÚµå
+	ì¡°ê±´ì‹2ì´ ì°¸ì´ë©´ ì‹¤í–‰ë  ì½”ë“œ
 }
-else if(Á¶°Ç½Ä3)
+else if(ì¡°ê±´ì‹3)
 {
-	Á¶°Ç½Ä3ÀÌ ÂüÀÌ¸é ½ÇÇàµÉ ÄÚµå
+	ì¡°ê±´ì‹3ì´ ì°¸ì´ë©´ ì‹¤í–‰ë  ì½”ë“œ
 }
 else
 {
-	À§ Á¶°ÇÀÌ ¸¸Á·µÇÁö ¾ÊÀ¸¸é ½ÇÇà µÉ ÄÚµå
+	ìœ„ ì¡°ê±´ì´ ë§Œì¡±ë˜ì§€ ì•Šìœ¼ë©´ ì‹¤í–‰ ë  ì½”ë“œ
 }
 
 ============================================================================
-if(Á¶°Ç½Ä1)
+if(ì¡°ê±´ì‹1)
 {
 }
 
-if(Á¶°Ç½Ä2)
+if(ì¡°ê±´ì‹2)
 {
 }
-if(Á¶°Ç½Ä3)
+if(ì¡°ê±´ì‹3)
 {
 }
 else
 {
-	À§ Á¶°ÇÀÌ ¸¸Á·µÇÁö ¾ÊÀ¸¸é ½ÇÇà µÉ ÄÚµå
+	ìœ„ ì¡°ê±´ì´ ë§Œì¡±ë˜ì§€ ì•Šìœ¼ë©´ ì‹¤í–‰ ë  ì½”ë“œ
 }
 
-¢¹ switch¹®
-½ºÀ§Ä¡¹®À» »ç¿ëÇÏ´Â °æ¿ì´Â ÀÏÀÏÀÌ Á¶°Çº°·Î ¼¼ÆÃÀ» ÇØÁÖ±â°¡ ¿ëÀÌÇÏ±â ¶§¹®¿¡
-»óÅÂº¯È­/Á¶°ÇÀÌ ¸¹Àº °æ¿ì¿¡ »ç¿ëÇÏ¸é ÁÁÀº È¿À²À» ³¾ ¼ö ÀÖ´Â ¹®¹ý
-if¹®°ú ¸Å¿ì Èí»çÇÏ´Ù´Â Æ¯Â¡ÀÌ ÀÖ°í ½ºÀ§Ä¡¹®À¸·Î ÀÛ¼ºÀÌ µÇ´Â ·ÎÁ÷Àº  if~else ¹®À¸·Î ÀüºÎ ´ëÃ¼°¡ °¡´ÉÇÏ´Ù
+â–· switchë¬¸
+ìŠ¤ìœ„ì¹˜ë¬¸ì„ ì‚¬ìš©í•˜ëŠ” ê²½ìš°ëŠ” ì¼ì¼ì´ ì¡°ê±´ë³„ë¡œ ì„¸íŒ…ì„ í•´ì£¼ê¸°ê°€ ìš©ì´í•˜ê¸° ë•Œë¬¸ì—
+ìƒíƒœë³€í™”/ì¡°ê±´ì´ ë§Žì€ ê²½ìš°ì— ì‚¬ìš©í•˜ë©´ ì¢‹ì€ íš¨ìœ¨ì„ ë‚¼ ìˆ˜ ìžˆëŠ” ë¬¸ë²•
+ifë¬¸ê³¼ ë§¤ìš° í¡ì‚¬í•˜ë‹¤ëŠ” íŠ¹ì§•ì´ ìžˆê³  ìŠ¤ìœ„ì¹˜ë¬¸ìœ¼ë¡œ ìž‘ì„±ì´ ë˜ëŠ” ë¡œì§ì€  if~else ë¬¸ìœ¼ë¡œ ì „ë¶€ ëŒ€ì²´ê°€ ê°€ëŠ¥í•˜ë‹¤
 
 ex)
 switch(dataType value)
@@ -78,50 +78,50 @@ switch(dataType value)
 	default:
 }
 
-ÀÎÀÚ °ª¿¡´Â intÇü/ charÇüÀÌ ¿Ã ¼ö ÀÖ´Ù.
-´ëºÎºÐ intÇüÀ» ¸¹ÀÌ »ç¿ëÇØ¼­ »ç¿ëÇÏ´Â ¹®¹ýÀÌ ½ºÀ§Ä¡
+ì¸ìž ê°’ì—ëŠ” intí˜•/ charí˜•ì´ ì˜¬ ìˆ˜ ìžˆë‹¤.
+ëŒ€ë¶€ë¶„ intí˜•ì„ ë§Žì´ ì‚¬ìš©í•´ì„œ ì‚¬ìš©í•˜ëŠ” ë¬¸ë²•ì´ ìŠ¤ìœ„ì¹˜
 
-½ºÀ§Ä¡¹®Àº if~else ¹®°ú ´Þ¸® ¹üÀ§¿¡ ÇØ´çÇÏ´Â Á¶°ÇÀ» ÁÙ ¼ö ¾øÀ»»Ó´õ·¯ Á¶°Ç¹®À¸·Î »ç¿ëµÉ ¼ö ÀÖ´Â ÀÚ·áÇüÀ» Á¤¼ö·Î Á¦ÇÑÇÏ
-ÄÄÆÄÀÏ·¯ ¹öÀü
+ìŠ¤ìœ„ì¹˜ë¬¸ì€ if~else ë¬¸ê³¼ ë‹¬ë¦¬ ë²”ìœ„ì— í•´ë‹¹í•˜ëŠ” ì¡°ê±´ì„ ì¤„ ìˆ˜ ì—†ì„ë¿ë”ëŸ¬ ì¡°ê±´ë¬¸ìœ¼ë¡œ ì‚¬ìš©ë  ìˆ˜ ìžˆëŠ” ìžë£Œí˜•ì„ ì •ìˆ˜ë¡œ ì œí•œí•˜
+ì»´íŒŒì¼ëŸ¬ ë²„ì „
 
 
-¢¹ Á¦¾î¹®ÀÇ Á¾·ù
+â–· ì œì–´ë¬¸ì˜ ì¢…ë¥˜
 1. return
-Á¶°Ç¹® ÀÏ¶§´Â ´Ù½Ã µ¹·Á º¸³½´Ù. /ÇÔ¼ö¿¡¼­´Â °ªÀ» ¹ÝÈ¯ÇÏ°í -> ÃÊ±âÈ­
+ì¡°ê±´ë¬¸ ì¼ë•ŒëŠ” ë‹¤ì‹œ ëŒë ¤ ë³´ë‚¸ë‹¤. /í•¨ìˆ˜ì—ì„œëŠ” ê°’ì„ ë°˜í™˜í•˜ê³  -> ì´ˆê¸°í™”
 2. continue
-Á¶Àü¹«ÀÏ ¶¼´Â ¿¬»êÀ» ÇÏÁö ¾Ê°í ¶Ù¾î ³Ñ´Â´Ù. /while¹®¿¡¼±´À ¹Ù·Î ÀÌÀü ¹®ÀåÀ¸·Î
+ì¡°ì „ë¬´ì¼ ë–¼ëŠ” ì—°ì‚°ì„ í•˜ì§€ ì•Šê³  ë›°ì–´ ë„˜ëŠ”ë‹¤. /whileë¬¸ì—ì„ ëŠ ë°”ë¡œ ì´ì „ ë¬¸ìž¥ìœ¼ë¡œ
 
 3. break
-while ¹® °°Àº °æ¿ì while¹®À» ºüÁ® ³ª°£´Ù.
-¹Ýº¹¹®À» Å»ÃâÇÏ´Â ¿ëµµ·Î »ç¿ëÀÌ µÈ´Ù.
-break À¯¹«¿¡ µû¶ó ½ÇÇà °á°ú°¡ ¿ÏÀüÈ÷ ¹Ù²Ù±â ¶§¹®¿¡ ÁÖÀÇ°¡ ÇÊ¿äÇÏ´Ù
+while ë¬¸ ê°™ì€ ê²½ìš° whileë¬¸ì„ ë¹ ì ¸ ë‚˜ê°„ë‹¤.
+ë°˜ë³µë¬¸ì„ íƒˆì¶œí•˜ëŠ” ìš©ë„ë¡œ ì‚¬ìš©ì´ ëœë‹¤.
+break ìœ ë¬´ì— ë”°ë¼ ì‹¤í–‰ ê²°ê³¼ê°€ ì™„ì „ížˆ ë°”ê¾¸ê¸° ë•Œë¬¸ì— ì£¼ì˜ê°€ í•„ìš”í•˜ë‹¤
 
 4. goto
-Á¡ÇÁ¹®ÀÌ¶ó ºÒ¸®¸ç goto¿¡ ¶óº§À» ÁöÁ¤ÇÏ¸é Áß°£¿¡ ÀÖ´Â Èå¸§À» ¹«½ÃÇÏ°í ÇØ´ç ¶óº§·Î Áï½Ã ÀÌµ¿
+ì í”„ë¬¸ì´ë¼ ë¶ˆë¦¬ë©° gotoì— ë¼ë²¨ì„ ì§€ì •í•˜ë©´ ì¤‘ê°„ì— ìžˆëŠ” íë¦„ì„ ë¬´ì‹œí•˜ê³  í•´ë‹¹ ë¼ë²¨ë¡œ ì¦‰ì‹œ ì´ë™
 
 
 
-¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹¢¹
+â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·â–·
 
  */
-#pragma endregion Á¶°Ç¹®
+#pragma endregion ì¡°ê±´ë¬¸
 
 void main()
 {
 	int nOperator;
-	cout << "¼ýÀÚ ÀÔ·Â: ";
+	cout << "ìˆ«ìž ìž…ë ¥: ";
 	cin >> nOperator;
 	if(nOperator == 0)
 	{
-		cout << "6¿ù" << endl;
+		cout << "6ì›”" << endl;
 	}
 	else if(nOperator == 1)
 	{
-		cout << "7¿ù" << endl;
+		cout << "7ì›”" << endl;
 	}
 	else
 	{
-		cout << "³ª¸ÓÁö ¿ù" << endl;
+		cout << "ë‚˜ë¨¸ì§€ ì›”" << endl;
 	}
 	cout << '\n';
 

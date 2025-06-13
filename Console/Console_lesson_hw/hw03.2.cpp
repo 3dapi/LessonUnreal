@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <time.h>
 #include <Windows.h>
 
-#pragma region °úÁ¦
+#pragma region ê³¼ì œ
 /**
 
-°úÁ¦ 02. ¹İº¹¹® ¼÷´Ş (º°Âï±â)
+ê³¼ì œ 02. ë°˜ë³µë¬¸ ìˆ™ë‹¬ (ë³„ì°ê¸°)
 while
 	*
    **
@@ -28,7 +28,7 @@ for
 *****
 
 
-µµÀü °úÁ¦. for¹® ÇÑÁÙ·Î
+ë„ì „ ê³¼ì œ. forë¬¸ í•œì¤„ë¡œ
 	   *
       ***
 	 *****
@@ -39,7 +39,7 @@ for
 */
 
 
-#pragma endregion °úÁ¦
+#pragma endregion ê³¼ì œ
 
 #pragma region USING_STD
 using std::cin;
@@ -49,11 +49,11 @@ using std::endl;
 
 void main()
 {
-	cout << "\n°úÁ¦02. º°Âï±â\n";
+	cout << "\nê³¼ì œ02. ë³„ì°ê¸°\n";
 	int maxStars = 16;
 
 	// test while 1
-	cout << "while-loop ·Î º°Âï±â\n";
+	cout << "while-loop ë¡œ ë³„ì°ê¸°\n";
 	int drawStars=maxStars;
 	while(drawStars)
 	{
@@ -95,7 +95,7 @@ void main()
 	}
 	cout << '\n';
 
-	cout << "for-loop ·Î º°Âï±â\n";
+	cout << "for-loop ë¡œ ë³„ì°ê¸°\n";
 	// test for1
 	for(int i=1; i<=maxStars; ++i)
 	{
@@ -118,7 +118,7 @@ void main()
 	}
 	cout << '\n';
 
-	cout << "µµÀü°úÁ¦ \n";
+	cout << "ë„ì „ê³¼ì œ \n";
 	for(int i=0; i<(maxStars*2) * (maxStars*2-1); ++i) cout << char((!((i+1) % (maxStars*2))) * '\n' + (!(!((i+1) % (maxStars*2))) && (((0 >((i%(maxStars*2))-(maxStars-1))) * (-1) * ((i%(maxStars*2))-(maxStars-1)) + (0<=((i%(maxStars*2))-(maxStars-1))) * ((i%(maxStars*2))-(maxStars-1)) + (0>((i/(maxStars*2))-(maxStars-1))) * (-1) * ((i/(maxStars*2))-(maxStars-1)) + (0<=((i/(maxStars*2))-(maxStars-1))) * ((i/(maxStars*2))-(maxStars-1)))< maxStars)) * '*' + (!(!((i+1) % (maxStars*2))) && !(((0 >((i%(maxStars*2))-(maxStars-1))) * (-1) * ((i%(maxStars*2))-(maxStars-1)) + (0<=((i%(maxStars*2))-(maxStars-1))) * ((i%(maxStars*2))-(maxStars-1)) + (0>((i/(maxStars*2))-(maxStars-1))) * (-1) * ((i/(maxStars*2))-(maxStars-1)) + (0<=((i/(maxStars*2))-(maxStars-1))) * ((i/(maxStars*2))-(maxStars-1)))< maxStars)) * ' ');
 
 	cout << '\n';
