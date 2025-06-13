@@ -16,6 +16,9 @@
     <ClCompile Include="Main04.cpp">
       <Filter>Lesson\04.조건문</Filter>
     </ClCompile>
+    <ClCompile Include="Example04.cpp">
+      <Filter>Lesson\04.조건문</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -41,6 +44,8 @@
     <Text Include="lesson02.txt">
       <Filter>Lesson\02. 자료형 + 변수 + 난수 %28c++11%29</Filter>
     </Text>
-    <Text Include="03.txt" />
+    <Text Include="lesson03.txt">
+      <Filter>Lesson\03.변수 랜돔</Filter>
+    </Text>
   </ItemGroup>
 </Project>

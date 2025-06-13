@@ -19,5 +19,17 @@
     <ClCompile Include="hw01.cpp">
       <Filter>Homework</Filter>
     </ClCompile>
+    <ClCompile Include="hw04.1.cpp">
+      <Filter>Homework</Filter>
+    </ClCompile>
+    <ClCompile Include="hw04.2.cpp">
+      <Filter>Homework</Filter>
+    </ClCompile>
+    <ClCompile Include="hw04.3.cpp">
+      <Filter>Homework</Filter>
+    </ClCompile>
+    <ClCompile Include="hw04.ex.cpp">
+      <Filter>Homework</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -108,23 +108,104 @@ break 유무에 따라 실행 결과가 완전히 바꾸기 때문에 주의가 
 
 void main()
 {
-	int nOperator;
-	cout << "숫자 입력: ";
-	cin >> nOperator;
-	if(nOperator == 0)
-	{
-		cout << "6월" << endl;
-	}
-	else if(nOperator == 1)
-	{
-		cout << "7월" << endl;
-	}
-	else
-	{
-		cout << "나머지 월" << endl;
-	}
-	cout << '\n';
+	//int nOperator;
+	//cout << "숫자 입력: ";
+	//cin >> nOperator;
+	//if(nOperator == 0)
+	//{
+	//	cout << "6월" << endl;
+	//}
+	//else if(nOperator == 1)
+	//{
+	//	cout << "7월" << endl;
+	//}
+	//else
+	//{
+	//	cout << "나머지 월" << endl;
+	//}
+	//cout << '\n';
 
+	//int inputNumber;
+	//cin >>inputNumber;
+	//switch(inputNumber)
+	//{
+	//	case 0:
+	//		cout << "0번 입력시 내가 출력된다 " <<endl;
+	//		break;
+	//	case 1:
+	//		cout << "1번 입력시 내가 출력된다 " <<endl;
+	//		break;
+	//	case 2:
+	//		cout << "2번 입력시 내가 출력된다 " <<endl;
+	//		break;
+	//	default:
+	//		cout << "그외" <<endl;
+	//		break;
+	//}
+	//cout <<'\n';
 
+	///**
+	// ▷증/감 연산자
+	// 전위 증/감 연산자 : 해당 변수의 값을 증/감 시킨 후 연산에 활용
+	// 후위 증/감 연산자 : 연산에 활용이 된 후 해당 변수의 값이 변경
+	// ※ 우선 순위 연산에 기반한다.
+	// */
+	//int nValue = 0;
+	//cout << "증/감 연산 결과 " <<endl;
+	////
+	//cout << "결과 값: " << ++nValue << endl;
+	//cout << "결과 값: " << --nValue << endl;
+	//cout << "결과 값: " << nValue++ << endl;
+	//cout << "결과 값: " << nValue-- << endl;
+	//cout << "최종 결과 값: " << nValue << endl;
+	//cout << '\n';
+
+	//int nValueA, nValueB, nValueC, nValueD;
+	//nValueA = nValueB = nValueC = nValueD = 10;
+
+	//if( (nValueA == nValueB++) && (nValueC++ < ++nValueD) )
+	//{
+	//	cout << "증/감 연산 결과 " <<endl;
+	//	cout << "근데 나는 실행이 될까...?" <<endl;
+	//	cout << nValueA << endl;
+	//	cout << nValueB << endl;
+	//	cout << nValueC << endl;
+	//	cout << nValueD << endl;
+	//}
+	//cout << '\n';
+
+	cout << "출력" <<endl;
+	for(int i=2; i<100+2; ++i)
+	{
+		if( i%2 != 0) continue;
+		cout << "출력 값: " << i <<endl;
+	}
+	/**
+	 ▷ goto 문
+	 사용을 할 때 정말 필요한가? 를 세 번 생각하고 사용한다.
+	 ex)
+	 goto 라벨;
+	 라벨:
+	 */
+
+	for(int i=2; i<10; i+=1)
+	{
+		for(int j=1; j<10; j+=1)
+		{
+			if(i%2 == 0)
+			{
+				goto EXIT_1;
+			}
+			if(i%5 == 0)
+			{
+				goto EXIT_2;
+			}
+			cout << i << "X " << j << " = " << i*j << endl << endl;
+		}
+	EXIT_1:
+		cout << "i 단을 출력 후 실행 " << i <<endl << endl;
+	}
+	EXIT_2:
+		cout << "반복문 탈출 " << i <<endl << endl;
 
 }
