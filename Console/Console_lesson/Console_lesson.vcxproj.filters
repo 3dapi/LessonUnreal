@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="TestMain.cpp">
+      <Filter>Lesson\01. 신규 프로젝트 생성 + 프로그램 입출력</Filter>
+    </ClCompile>
+    <ClCompile Include="Main01.cpp">
+      <Filter>Lesson\01. 신규 프로젝트 생성 + 프로그램 입출력</Filter>
+    </ClCompile>
+    <ClCompile Include="Main02.cpp">
+      <Filter>Lesson\02. 자료형 + 변수 + 난수 %28c++11%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Main03.cpp">
+      <Filter>Lesson\03.변수 랜돔</Filter>
+    </ClCompile>
+    <ClCompile Include="Main04.cpp">
+      <Filter>Lesson\04.조건문</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Lesson">
+      <UniqueIdentifier>{efe6c554-2b36-4555-a4ed-5e1fda333aee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\01. 신규 프로젝트 생성 + 프로그램 입출력">
+      <UniqueIdentifier>{90b478d6-3e8e-4847-8995-9d43b0066f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\02. 자료형 + 변수 + 난수 %28c++11%29">
+      <UniqueIdentifier>{377b3fc3-5989-4821-a775-edc6a52d9f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\03.변수 랜돔">
+      <UniqueIdentifier>{a89da8ee-6c82-412f-aba8-2010e1e3f178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\04.조건문">
+      <UniqueIdentifier>{c9db7ea6-e753-4746-8695-a6a82a7c1fdf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="lesson01.txt">
+      <Filter>Lesson\01. 신규 프로젝트 생성 + 프로그램 입출력</Filter>
+    </Text>
+    <Text Include="lesson02.txt">
+      <Filter>Lesson\02. 자료형 + 변수 + 난수 %28c++11%29</Filter>
+    </Text>
+    <Text Include="03.txt" />
+  </ItemGroup>
+</Project>
