@@ -28,8 +28,17 @@ void main()
 void GameMain();
 // 게임 플레이 메인
 void GamePlay();
+
+// 게임 플레이어 입력값 유효 확인
+bool IsvalidPlayerValue(int gameValue);
+
 // 가위, 바위, 보 승무패 결정.
-void DecidePlay(int* comValue,int* myValue, int* myWin,int* myEqual,int* myLose);
+// 0: 패배, 1: 비김, 2: 승리
+int DecidePlay(int comValue, int myValue);
+// 가위, 바위, 보 승무패 메시지.
+void DecidePlayMessage(int playResult);	// 0: 패배, 1: 비김, 2: 승리
+// 게임플레이 결과 메시지.
+void PlayEndMessage(int resultWin, int resultEqual, int resultLose);
 
 //(EP)
 void main()
@@ -37,8 +46,6 @@ void main()
 	GameMain();
 }
 
-// show cheat
-bool showCheat = true;
 // play max number
 int maxPlay = 5;
 
@@ -46,7 +53,7 @@ void GameMain()
 {
 	srand(time(NULL));
 	cout << "함수와 포인터를 활용한 가위바위보 구현" << endl;
-	cout << "가위 바위 보 게임을 시작합니다. 총 " << maxPlay << " 판 진행합니다." << endl;
+	cout << "가위 바위 보 게임을 시작합니다. 총 " << maxPlay << " 판 중에 " << (maxPlay/2) +1 << "판을 이겨야 승리합니다." << endl;
 	GamePlay();
 }
 
@@ -57,99 +64,141 @@ void GamePlay()
 	int myWin = 0;
 	int myEqual = 0;
 	int myLose = 0;
-	while(0 < maxPlay--)
+	int cheatValue;
+	cout << "치트 활성화 하려면 1 을 입력하세요" << endl;
+	cin >> cheatValue;
+
+	while (0 < maxPlay)
 	{
-		comValue = 1+ rand() % 3;
-		if(showCheat)
+		cout << '\n';
+		comValue = 1 + rand() % 3;
+		if (1 == cheatValue)
 		{
 			cout << "치트: 컴퓨터:" << comValue << endl;
 		}
 		cout << "가위 바위 보를 입력 하세요. 가위: 1, 바위: 2, 보: 3" << endl;
 		cin >> myValue;
-		DecidePlay(&comValue,&myValue,&myWin,&myEqual,&myLose);
+		if (!IsvalidPlayerValue(myValue))
+		{
+			cout << "유효하지 않은 가위 바위 보 입력 값입니다. " << endl;
+			continue;
+		}
+		else
+		{
+			--maxPlay;
+		}
+		int playResult = DecidePlay(comValue, myValue);
+		if (2 == playResult)
+		{
+			++myWin;
+		}
+		else if (1 == playResult)
+		{
+			++myEqual;
+		}
+		else
+		{
+			++myLose;
+		}
+		DecidePlayMessage(playResult);
 	}
-	cout << myWin << " 승 " << myEqual << " 무 " << myLose << " 패" << endl;
-	// 3승 이상만 승리로 한다. 비기거나 진 것은 실패
-	if(3 <= myWin)
-	{
-		cout << "승리 ^^/ !!!!!" << endl <<endl;
-	}
-	else
-	{
-		cout << "패배 -_- !!!!!" << endl <<endl;
-	}
+	PlayEndMessage(myWin, myEqual, myLose);
 }
 
-void DecidePlay(int* comValue, int* myValue, int* myWin, int* myEqual, int* myLose)
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+bool IsvalidPlayerValue(int gameValue)
 {
-	if(*comValue == 1)			// 컴퓨터: 가위
+	if (1 > gameValue || gameValue > 3)
+		return false;
+	return true;
+}
+
+// 0: 패배, 1: 비김, 2: 승리
+int DecidePlay(int comValue, int myValue)
+{
+	if (comValue == 1)			// 컴퓨터: 가위
 	{
-		if(*myValue == 1)		// 플레이어: 가위
+		if (myValue == 1)		// 플레이어: 가위
 		{
-			cout << "비겼습니다." << endl;
-			++(*myEqual);
+			return 1;
 		}
-		else if(*myValue == 2)	// 플레이어: 바위
+		else if (myValue == 2)	// 플레이어: 바위
 		{
-			cout << "이겼습니다." << endl;
-			++(*myWin);
+			return 2;
 		}
-		else if(*myValue == 3)	// 플레이어: 보
+		else if (myValue == 3)	// 플레이어: 보
 		{
-			cout << "졌습니다." << endl;
-			++(*myLose);
+			return 0;
 		}
 		else					// 플레이어: 다른 값. 패배로 처리
 		{
-			cout << "졌습니다." << endl;
-			++(*myLose);
+			return 0;
 		}
 	}
-	else if(*comValue == 2)		// 컴퓨터: 바위
+	else if (comValue == 2)		// 컴퓨터: 바위
 	{
-		if(*myValue == 1)		// 플레이어: 가위
+		if (myValue == 1)		// 플레이어: 가위
 		{
-			cout << "졌습니다." << endl;
-			++(*myLose);
+			return 0;
 		}
-		else if(*myValue == 2)	// 플레이어: 바위
+		else if (myValue == 2)	// 플레이어: 바위
 		{
-			cout << "비겼습니다." << endl;
-			++(*myEqual);
+			return 1;
 		}
-		else if(*myValue == 3)	// 플레이어: 보
+		else if (myValue == 3)	// 플레이어: 보
 		{
-			cout << "이겼습니다." << endl;
-			++(*myWin);
+			return 2;
 		}
 		else					// 플레이어: 다른 값. 패배로 처리
 		{
-			cout << "졌습니다." << endl;
-			++(*myLose);
+			return 0;
 		}
 	}
 	else						// 컴퓨터: 보
 	{
-		if(*myValue == 1)		// 플레이어: 가위
+		if (myValue == 1)		// 플레이어: 가위
 		{
-			cout << "이겼습니다." << endl;
-			++(*myWin);
+			return 2;
 		}
-		else if(*myValue == 2)	// 플레이어: 바위
+		else if (myValue == 2)	// 플레이어: 바위
 		{
-			cout << "졌습니다." << endl;
-			++(*myLose);
+			return 0;
 		}
-		else if(*myValue == 3)	// 플레이어: 보
+		else if (myValue == 3)	// 플레이어: 보
 		{
-			cout << "비겼습니다." << endl;
-			++(*myEqual);
+			return 1;
 		}
 		else					// 플레이어: 다른 값. 패배로 처리
 		{
-			cout << "졌습니다." << endl;
-			++(*myLose);
+			return 0;
 		}
 	}
 	cout << '\n';
+}
+
+void DecidePlayMessage(int playResult)
+{
+	switch (playResult)
+	{
+	case 0: cout << "졌습니다." << endl;			break;
+	case 1:	cout << "비겼습니다." << endl;		break;
+	case 2:	cout << "이겼습니다." << endl;		break;
+	default:
+		break;
+	}
+}
+
+void PlayEndMessage(int resultWin, int resultEqual, int resultLose)
+{
+	cout << resultWin << " 승 " << resultEqual << " 무 " << resultLose << " 패" << endl;
+	// 3승 이상만 승리로 한다. 비기거나 진 것은 실패
+	if (3 <= resultWin)
+	{
+		cout << "승리 ^^/ !!!!!" << endl << endl;
+	}
+	else
+	{
+		cout << "패배 -_- !!!!!" << endl << endl;
+	}
 }
