@@ -84,7 +84,8 @@ void main()
 
 void setupComputerNumber()
 {
-	computerValue100 = 1 + rand() % 9;	// 1~9
+	//computerValue100 = 1 + rand() % 9;	// 1~9
+	computerValue100 = 0 + rand() % 10;	// 0~9
 	// 100 자릿 수와 다른 10의 자릿 수
 	while (true)
 	{
@@ -114,7 +115,7 @@ int setupPlayerNumber()
 	int playerValue = 0;
 	while (true)
 	{
-		cout << "100 부터 999 중 세자리의 숫자가 모두 다른 숫자를 입력하세요.: ";
+		cout << "첫째 자리 0포함, 세 자리의 숫자가 모두 다른 숫자를 입력하세요.: ";
 		cin >> playerValue;
 		if (checkPlayerValue(playerValue))
 			break;
@@ -131,7 +132,13 @@ void displayCheat()
 
 bool checkPlayerValue(int playerValue)
 {
-	if (100 > playerValue || playerValue > 999)
+	if (1 > playerValue || playerValue > 999)
+		return false;
+	int player100, player10, player1;
+	player100 = playerValue / 100;
+	player10 = (playerValue - (player100 * 100)) / 10;
+	player1 = (playerValue - (player100 * 100 + player10 * 10));
+	if (player100 == player10 || player100 == player1 || player10 == player1)
 		return false;
 	return true;
 }
