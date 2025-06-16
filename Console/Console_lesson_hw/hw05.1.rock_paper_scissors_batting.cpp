@@ -42,6 +42,7 @@ void main()
 	srand(time(NULL));
 	cout << "과제01. 가위바위 보 배팅(10000원)\n";
 	cout << "5판을 하거나 내가 가진 돈을 전부 잃으면 게임 종료합니다.\n";
+	cout << "승: 배팅금액X3, 패: -배팅금액X7, 무: 배팅금액X5 !!!\n";
 	while (0<gamePlayCount)
 	{
 		// 배팅금액 확인
