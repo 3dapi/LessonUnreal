@@ -31,5 +31,8 @@
     <ClCompile Include="hw03.2.stars.cpp">
       <Filter>Homework</Filter>
     </ClCompile>
+    <ClCompile Include="hw05.rock_paper_scissors_batting.cpp">
+      <Filter>Homework</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
