@@ -1,14 +1,4 @@
-﻿#include <iostream>
-#include <time.h>
-#include <Windows.h>
-
-#pragma region USING STD
-using std::cin;
-using std::cout;
-using std::endl;
-#pragma endregion USING STD
-
-#pragma region 과제
+﻿#pragma region 과제
 /**
 과제03.일 수 출력기
 if or switch 중에 본인이 판단해 효율 적인 것을 선택
@@ -17,6 +7,16 @@ if or switch 중에 본인이 판단해 효율 적인 것을 선택
 총 5번을 입력하면 프로그램 종료
 */
 #pragma endregion 과제
+
+#include <iostream>
+#include <time.h>
+#include <Windows.h>
+
+#pragma region USING STD
+using std::cin;
+using std::cout;
+using std::endl;
+#pragma endregion USING STD
 
 void main()
 {

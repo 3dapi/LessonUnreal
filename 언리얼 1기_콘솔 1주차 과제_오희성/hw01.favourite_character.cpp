@@ -1,6 +1,13 @@
-﻿#include <iostream>
-#include <Windows.h>
+﻿#pragma region 과제:좋아하는 캐릭터
 
+/**
+과제 01: 좋아하는 캐릭터 출력 흑백
+과제 02: 좋아하는 캐릭터 출력 컬러
+ */
+#pragma endregion USING_STD
+
+#include <iostream>
+#include <Windows.h>
 
 void TextColor(int font, int backGround);
 

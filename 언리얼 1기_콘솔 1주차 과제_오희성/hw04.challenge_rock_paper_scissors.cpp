@@ -1,14 +1,4 @@
-﻿#include <iostream>
-#include <time.h>
-#include <Windows.h>
-
-#pragma region USING_STD
-using std::cin;
-using std::cout;
-using std::endl;
-#pragma endregion USING_STD
-
-#pragma region 과제
+﻿#pragma region 도전 과제
 /**
 도전과제1. 함수와 포인터를 활용한 가위바위보 구현
 양식 수정 불가 -> 메인함수에서는 함수 호출 이외에 어떤 코드도 작성할 수 없다.
@@ -22,7 +12,17 @@ void main()
 	Function(a, b, c...);
 }
 */
-#pragma endregion 과제
+#pragma endregion 도전 과제
+
+#include <iostream>
+#include <time.h>
+#include <Windows.h>
+
+#pragma region USING_STD
+using std::cin;
+using std::cout;
+using std::endl;
+#pragma endregion USING_STD
 
 // 게임 프로그램 메인
 void GameMain();

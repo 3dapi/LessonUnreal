@@ -1,55 +1,15 @@
-﻿#include <iostream>
-#include <time.h>
-#include <Windows.h>
-
-#pragma region 과제
+﻿#pragma region 과제
 /**
 실습
 구구단 마무리 for/while/do~while
 무기 대미지 평균값 (20~25)
-
-과제 01. 연산자 활용
-a. 두 개의 정술르 받아 두 수의 덧샘과 뺄샘의 결과를 출력하는 프로그램 작성
-b. 3개의 정수 num, num2, num3 를 받아 다음 연산의 결과를 출력하는 프로그램 작성
-(num1+num2) * (num3 + num1) % num1 = ?
-c. 입력받은 두 정수를 나누었을 때 얻게 되는 몫과 나머지를 출력하는 프로그램 작성
-7과 2가 인풋 -> 묷으로 3/ 나머지 1이 출력 되면 OK
-
-*****
-****
-***
-**
-* 
-**
-***
-****
-*****
-
-과제 02. 반복문 숙달 (별찍기)
-       *
-while *** for
-     *****
-    *******
-     *****
-while *** for
-       *
-
-도전 과제. for문 한줄로
-	   *
-      ***
-	 *****
-	*******
-	 *****
-      ***
-	   *
-
-
-조건문 조사
-노트에 적어 온다.
 */
 
-
 #pragma endregion 과제
+
+#include <iostream>
+#include <time.h>
+#include <Windows.h>
 
 #pragma region USING_STD
 using std::cin;

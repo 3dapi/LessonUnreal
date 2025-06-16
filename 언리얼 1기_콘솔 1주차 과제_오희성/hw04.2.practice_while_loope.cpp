@@ -1,14 +1,4 @@
-﻿#include <iostream>
-#include <time.h>
-#include <Windows.h>
-
-#pragma region USING_STD
-using std::cin;
-using std::cout;
-using std::endl;
-#pragma endregion USING_STD
-
-#pragma region 과제
+﻿#pragma region 과제
 /**
 과제02. 반복문 숙달
 정수 하나를 입력받아 -5씩 반복적으로 연산되는 식을 만든다.
@@ -17,6 +7,16 @@ using std::endl;
 while문 + do~while문 두 가지 버전으로 만들어 올 것
 */
 #pragma endregion 과제
+
+#include <iostream>
+#include <time.h>
+#include <Windows.h>
+
+#pragma region USING_STD
+using std::cin;
+using std::cout;
+using std::endl;
+#pragma endregion USING_STD
 
 void main()
 {

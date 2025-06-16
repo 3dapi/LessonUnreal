@@ -1,14 +1,4 @@
-﻿#include <iostream>
-#include <time.h>
-#include <Windows.h>
-
-#pragma region USING_STD
-using std::cin;
-using std::cout;
-using std::endl;
-#pragma endregion USING_STD
-
-#pragma region 과제
+﻿#pragma region 과제
 /**
 과제01. 가위 바위 보 게임
 if문을 이용해 만든다.
@@ -18,6 +8,16 @@ if문을 이용해 만든다.
 필수:치트
 */
 #pragma endregion 과제
+
+#include <iostream>
+#include <time.h>
+#include <Windows.h>
+
+#pragma region USING_STD
+using std::cin;
+using std::cout;
+using std::endl;
+#pragma endregion USING_STD
 
 void main()
 {
@@ -34,7 +34,7 @@ void main()
 
 	bool showCheat = true;
 
-	cout << "가위 바위 보 게임을 시작합니다. 총 " << maxPlay << " 판 진행합니다." << endl;
+	cout << "가위 바위 보 게임을 시작합니다. 총 " << maxPlay << " 판 진행합니다. 3승 이상 해야 승리합니다. " << endl;
 	while (0 < maxPlay--)
 	{
 		comValue = 1+ rand() % 3;
