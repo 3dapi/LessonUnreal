@@ -45,6 +45,9 @@ void main()
 
 	cout << "과제02. 숫자 야구" << endl;
 
+	cout << "치트 활성화 하려면 1 을 입력하세요" << endl;
+	cin >> enableCheat;
+
 	setupComputerNumber();
 
 	while (true)
