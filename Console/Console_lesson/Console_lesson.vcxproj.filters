@@ -20,16 +20,22 @@
       <Filter>Lesson\04.조건문</Filter>
     </ClCompile>
     <ClCompile Include="Main05.cpp">
-      <Filter>Lesson\05. 함수</Filter>
+      <Filter>Lesson\05. 함수+변/상수+전처리기</Filter>
     </ClCompile>
     <ClCompile Include="Main05_A.cpp">
-      <Filter>Lesson\05. 함수</Filter>
+      <Filter>Lesson\05. 함수+변/상수+전처리기</Filter>
     </ClCompile>
     <ClCompile Include="Main05_B.cpp">
-      <Filter>Lesson\05. 함수</Filter>
+      <Filter>Lesson\05. 함수+변/상수+전처리기</Filter>
+    </ClCompile>
+    <ClCompile Include="Main05_C.cpp">
+      <Filter>Lesson\05. 함수+변/상수+전처리기</Filter>
     </ClCompile>
     <ClCompile Include="Main06.cpp">
-      <Filter>Lesson\06. 배열</Filter>
+      <Filter>Lesson\06. 배열 +난수</Filter>
+    </ClCompile>
+    <ClCompile Include="Example02.cpp">
+      <Filter>Lesson\06. 배열 +난수</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,11 +54,11 @@
     <Filter Include="Lesson\04.조건문">
       <UniqueIdentifier>{c9db7ea6-e753-4746-8695-a6a82a7c1fdf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Lesson\06. 배열">
-      <UniqueIdentifier>{c69ff04c-5b69-4e4f-b5ce-1260e8e1def3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Lesson\05. 함수">
+    <Filter Include="Lesson\05. 함수+변/상수+전처리기">
       <UniqueIdentifier>{241d6b08-9d90-4656-90a3-cca552988f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\06. 배열 +난수">
+      <UniqueIdentifier>{fdee9412-75d6-47d7-9353-551a3c549d40}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -65,5 +71,10 @@
     <Text Include="lesson03.txt">
       <Filter>Lesson\03.변수 랜돔</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Example02.h">
+      <Filter>Lesson\06. 배열 +난수</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
