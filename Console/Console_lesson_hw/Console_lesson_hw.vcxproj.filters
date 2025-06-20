@@ -37,5 +37,8 @@
     <ClCompile Include="hw05.2.number_baseball.cpp">
       <Filter>Homework</Filter>
     </ClCompile>
+    <ClCompile Include="hw.main.cpp">
+      <Filter>Homework</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

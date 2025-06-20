@@ -16,7 +16,7 @@
     <ClCompile Include="Main04.cpp">
       <Filter>Lesson\04.조건문</Filter>
     </ClCompile>
-    <ClCompile Include="Example04.cpp">
+    <ClCompile Include="Example01.cpp">
       <Filter>Lesson\04.조건문</Filter>
     </ClCompile>
     <ClCompile Include="Main05.cpp">
@@ -36,6 +36,18 @@
     </ClCompile>
     <ClCompile Include="Example02.cpp">
       <Filter>Lesson\06. 배열 +난수</Filter>
+    </ClCompile>
+    <ClCompile Include="Main06_A.cpp">
+      <Filter>Lesson\06. 배열 +난수</Filter>
+    </ClCompile>
+    <ClCompile Include="Example03.cpp">
+      <Filter>Lesson\07. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="LessonMain.cpp">
+      <Filter>Lesson</Filter>
+    </ClCompile>
+    <ClCompile Include="Example04.cpp">
+      <Filter>Lesson</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +72,9 @@
     <Filter Include="Lesson\06. 배열 +난수">
       <UniqueIdentifier>{fdee9412-75d6-47d7-9353-551a3c549d40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lesson\07. 문자열">
+      <UniqueIdentifier>{0d13c98f-40f5-4056-b926-bd6ab8ba8f83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="lesson01.txt">
@@ -75,6 +90,12 @@
   <ItemGroup>
     <ClInclude Include="Example02.h">
       <Filter>Lesson\06. 배열 +난수</Filter>
+    </ClInclude>
+    <ClInclude Include="Example03.h">
+      <Filter>Lesson\07. 문자열</Filter>
+    </ClInclude>
+    <ClInclude Include="Example04.h">
+      <Filter>Lesson</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
