@@ -1,7 +1,9 @@
 ﻿
 //#include "Example03.h"
-#include "Example04.h"
-void main()
+#include "Lesson09.h"
+
+int main()
 {
-	EXAMPLE_4::Example();
+	Lesson09::Example();
+	return 0;
 }

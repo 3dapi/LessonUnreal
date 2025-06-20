@@ -49,6 +49,9 @@
     <ClCompile Include="Example04.cpp">
       <Filter>Lesson</Filter>
     </ClCompile>
+    <ClCompile Include="Lesson09.cpp">
+      <Filter>Lesson</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -95,6 +98,9 @@
       <Filter>Lesson\07. 문자열</Filter>
     </ClInclude>
     <ClInclude Include="Example04.h">
+      <Filter>Lesson</Filter>
+    </ClInclude>
+    <ClInclude Include="Lesson09.h">
       <Filter>Lesson</Filter>
     </ClInclude>
   </ItemGroup>
