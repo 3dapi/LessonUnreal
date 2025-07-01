@@ -99,7 +99,7 @@ namespace Lesson09
 		cout << "str2: " << str2 << endl;
 
 
-		register int cc1;
-		int register cc2;
+		//register int cc1;
+		//int register cc2;
 	}
 }

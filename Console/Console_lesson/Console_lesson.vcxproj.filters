@@ -53,6 +53,7 @@
       <Filter>Lesson</Filter>
     </ClCompile>
     <ClCompile Include="MainGame_01.cpp" />
+    <ClCompile Include="MainGame_02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -105,5 +106,6 @@
       <Filter>Lesson</Filter>
     </ClInclude>
     <ClInclude Include="MainGame_01.h" />
+    <ClInclude Include="MainGame_02.h" />
   </ItemGroup>
 </Project>
